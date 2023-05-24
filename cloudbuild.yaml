@@ -2,7 +2,5 @@ steps:
   # list content of storage bucket
   # - name: "gcr.io/cloud-builders/docker"
 - name: "gcr.io/cloud-builders"
-  args: ["gcloud storage ls gs://keyuna_bucket/*", "gcloud projects get-iam-policy sandbox-io-289003", "kubectl get pods", ""]
-  # args: ["build", "-t", "gcr.io/project-id/image:tag", "."]
-  # push container image
-  # deploy container image to GKE
+  args: ["gcloud storage ls gs://keyuna_bucket/*", "gcloud projects get-iam-policy sandbox-io-289003", "kubectl get pods", "kubectl create ns kazre_stages"]
+  
