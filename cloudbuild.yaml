@@ -5,6 +5,7 @@ steps:
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["projects", "get-iam-policy", "sandbox-io-289003"]
 - name: "gcr.io/cloud-builders/gcloud"
+  entrypoint: "kubectl"
   args: ["kubectl get pods"]
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["kubectl create ns kazre_stages"]
