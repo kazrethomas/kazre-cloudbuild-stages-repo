@@ -1,5 +1,12 @@
 steps:
   # list content of storage bucket
-- name: "gcr.io/cloud-builders/docker"
-  args: ["gcloud storage ls gs://keyuna_bucket/*", "gcloud projects get-iam-policy sandbox-io-289003", "kubectl get pods", "kubectl create ns kazre_stages"]
-  
+- name: "gcr.io/cloud-builders/gcloud"
+  args: ["gcloud storage ls gs://keyuna_bucket/*"]
+- name: "gcr.io/cloud-builders/gcloud"
+  args: ["gcloud projects get-iam-policy sandbox-io-289003"]
+- name: "gcr.io/cloud-builders/gcloud"
+  args: ["kubectl get pods"]
+- name: "gcr.io/cloud-builders/gcloud"
+  args: ["kubectl create ns kazre_stages"]
+#- name: "gcr.io/cloud-builders/docker"
+#  args: ["gcloud storage ls gs://keyuna_bucket/*", "gcloud projects get-iam-policy sandbox-io-289003", "kubectl get pods", "kubectl create ns kazre_stages"]
