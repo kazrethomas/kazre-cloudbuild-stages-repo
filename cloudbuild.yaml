@@ -3,7 +3,7 @@ steps:
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["storage", "ls", "gs://keyuna_bucket/*"]
 - name: "gcr.io/cloud-builders/gcloud"
-  args: ["gcloud projects get-iam-policy sandbox-io-289003"]
+  args: ["projects", "get-iam-policy", "sandbox-io-289003"]
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["kubectl get pods"]
 - name: "gcr.io/cloud-builders/gcloud"
