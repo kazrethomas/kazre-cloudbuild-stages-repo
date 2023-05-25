@@ -1,7 +1,7 @@
 steps:
   # list content of storage bucket
 - name: "gcr.io/cloud-builders/gcloud"
-  args: ["gcloud storage ls gs://keyuna_bucket/*"]
+  args: ["storage ls gs://keyuna_bucket/*"]
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["gcloud projects get-iam-policy sandbox-io-289003"]
 - name: "gcr.io/cloud-builders/gcloud"
